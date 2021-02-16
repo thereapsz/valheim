@@ -31,10 +31,10 @@ docker run -itd --name Valheim \
 ```
 (defaults)
 ```
-1. ENV SERVER_NAME="Frostborn Server"
-2. ENV PORT=2456
-3. ENV WORLD="Solus"
-4. ENV PASSWORD="Secret"
-5. ENV SAVE_DIR="valheim/save"
-6. ENV AUTOUPDATE="false"
+ENV SERVER_NAME="Frostborn Server"
+ENV PORT=2456
+ENV WORLD="Solus"
+ENV PASSWORD="Secret"
+ENV SAVE_DIR="valheim/save"
+ENV AUTOUPDATE="false"
 ```
