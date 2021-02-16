@@ -25,7 +25,3 @@ if [[ -f "start_server.sh" ]]; then
 else
   echo "Error during install/startup"
 fi
-
-# ./steamcmd.sh +login anonymous +force_install_dir /valheim +app_update 896660 validate +quit
-# ffind "/tmp" -type f -exec echo Found file {} \;
-#./start_server.sh -savedir "/valheim/save" -name ${SERVER_NAME} -port ${PORT} -world ${WORLD} -password ${PASSWORD}
