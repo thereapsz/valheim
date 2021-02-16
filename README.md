@@ -11,6 +11,18 @@ server files are stored under "/valheim", the world/save file is stored under "/
 
 ## env variables
 
+...docker run -itd --name Valheim \
+   -p 2456:2456 -p 2457:2457 -p 2458:2458 \
+   -v YOURE_SERVERFILE_PATH:/valheim \
+   -v YOURE_SAVE_LOCATION:/valheim/save \
+   -e SERVER_NAME='My Server' \
+   -e PORT='2456' \
+   -e WORLD='MyWorldName' \
+   -e PASSWORD='MyServerPassword' \
+   -e SAVE_DIR='/valheim/save' \
+   -e AUTOUPDATE='false' \
+   reapsz/valheim
+
 (defaults)
 
 1. ENV SERVER_NAME="Frostborn Server"
