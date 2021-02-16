@@ -40,3 +40,29 @@ ENV PASSWORD="Secret"
 ENV SAVE_DIR="valheim/save"
 ENV AUTOUPDATE="false"
 ```
+## Compose
+1. docker-compose up -d
+2. docker-compose down
+```
+version: "3.9"
+services:
+  valheim:
+    image: "reapsz:valheim"
+    environment:
+      - SERVER_NAME="Frostborn Server"
+      - PORT=2456
+      - WORLD="Solus"
+      - SAVE_DIR="valheim/save"
+      - AUTOUPDATE="false"
+    ports:
+      - "2456:2456"
+      - "2457:2457"
+      - "2458:2458"
+```
+for custom volume add:
+
+```
+    volumes:
+      - YOURE_SERVER_FILES:/valheim
+      - YOURE_SAVE_FILES:/valheim/save
+```
