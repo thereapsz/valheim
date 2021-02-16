@@ -41,6 +41,8 @@ ENV SAVE_DIR="valheim/save"
 ENV AUTOUPDATE="false"
 ```
 ## Compose
+1. docker-compose up -d
+2. docker-compose down
 ```
 version: "3.9"
 services:
