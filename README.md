@@ -11,7 +11,7 @@ server files are stored under "/valheim", the world/save file is stored under "/
 
 ## env variables
 
-...docker run -itd --name Valheim \
+docker run -itd --name Valheim \
    -p 2456:2456 -p 2457:2457 -p 2458:2458 \
    -v YOURE_SERVERFILE_PATH:/valheim \
    -v YOURE_SAVE_LOCATION:/valheim/save \
