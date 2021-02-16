@@ -1,6 +1,8 @@
 # Valheim
 Valheim Server for Docker
 
+if env "AUTOUPDATE" is set to true, the server will run steamcmd update and validate before server start.
+
 ## Quick start
 
 ```
