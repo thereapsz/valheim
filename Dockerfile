@@ -4,7 +4,7 @@ ENV SERVER_NAME="Frostborn Server"
 ENV PORT=2456
 ENV WORLD="Solus"
 ENV PASSWORD="Secret"
-ENV SAVE_DIR="valheim/save"
+ENV SAVE_DIR="/valheim/save"
 ENV AUTOUPDATE="false"
 
 RUN apt-get update && \

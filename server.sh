@@ -1,11 +1,5 @@
 #!/bin/bash
 echo "${SERVER_NAME} with world: ${WORLD}"
-case $1 in
-    -u | --update )
-        shift
-        update=true
-    ;;
-esac
 
 if [ "${AUTOUPDATE}" == "true" ]; then
   echo "Update True"
