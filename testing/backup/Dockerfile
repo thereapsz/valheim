@@ -9,6 +9,8 @@ ENV PASSWORD="Secret"
 ENV SAVE_DIR="/valheim/save"
 ENV AUTOUPDATE="false"
 
+ENV INTERVAL=60
+
 COPY backup.sh /
 
 CMD bash /backup.sh

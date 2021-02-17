@@ -18,11 +18,13 @@ fi
 #start game server
 if [[ -f "start_server.sh" ]]; then
   echo "dir not empty"
+  #copy from valheim start script
   export templdpath=$LD_LIBRARY_PATH
   export LD_LIBRARY_PATH=./linux64:$LD_LIBRARY_PATH
   export SteamAppId=892970
-  bash /valheim/valheim_server.x86_64 -savedir "/valheim/save" -name ${SERVER_NAME} -port ${PORT} -world ${WORLD} -password ${PASSWORD}
+  ./valheim_server.x86_64 -savedir "$SAVE_DIR" -name ${SERVER_NAME} -port ${PORT} -world ${WORLD} -password ${PASSWORD}
   export LD_LIBRARY_PATH=$templdpath
+  #copy from valheim start script
 else
   echo "Error during install/startup"
   exit
