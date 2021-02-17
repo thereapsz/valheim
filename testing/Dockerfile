@@ -25,9 +25,9 @@ RUN mkdir /valheim
 RUN mkdir /valheim/save
 RUN mkdir /valheim/backup
 WORKDIR /valheim
-COPY start.sh /
-COPY backup.sh /
+COPY start.sh /valheim
+#COPY backup.sh /valheim
 
-CMD bash /start.sh
+CMD bash /valheim/start.sh
 
 #.config/unity3d/IronGate/Valheim/worlds

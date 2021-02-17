@@ -1,0 +1,27 @@
+version: "3.9"
+services:
+  valheim:
+    build: .
+    #image: "reapsz/valheim:latest"
+    #image: "valheim:testing"
+    environment:
+      - SERVER_NAME="Frostborn Server"
+      - PORT=2456
+      - WORLD="Solus"
+      - SAVE_DIR="/valheim/save"
+      - AUTOUPDATE="true"
+    ports:
+      - "2456:2456"
+      - "2457:2457"
+      - "2458:2458"
+    volumes:
+      - valheimdata:/valheim
+  backup:
+    image: "valheim:backup"
+    depends_on:
+      - valheim
+    volumes:
+      - valheimdata:/valheim
+
+volumes:
+     valheimdata:
