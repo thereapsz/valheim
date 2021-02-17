@@ -10,7 +10,7 @@ do
     sleep 1
     tar -cpzf $DESTINATION $SOURCEFOLDER #create the backup
     if [ $? -eq 0 ]; then
-      echo OK
+      echo "$BACKUPTIME.tar.gz saved!"
     else
       echo "BACKUP FAILED"
     fi
