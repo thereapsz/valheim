@@ -1,8 +1,8 @@
 FROM ubuntu:18.04
 
-ENV SERVER_NAME="Frostborn Server"
+ENV SERVER_NAME="My Server"
 ENV PORT=2456
-ENV WORLD="Solus"
+ENV WORLD="Dedicated"
 ENV PASSWORD="Secret"
 ENV SAVE_DIR="/valheim/save"
 ENV AUTOUPDATE="false"
@@ -24,8 +24,8 @@ EXPOSE 2456
 RUN mkdir /valheim
 RUN mkdir /valheim/save
 WORKDIR /valheim
-COPY server.sh /
+COPY start.sh /
 
-CMD bash /server.sh
+CMD bash /start.sh
 
 #.config/unity3d/IronGate/Valheim/worlds
