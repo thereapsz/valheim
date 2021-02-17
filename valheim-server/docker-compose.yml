@@ -3,7 +3,7 @@ services:
   valheim:
     #build: .
     #image: "reapsz/valheim:latest"
-    image: "valheim:testing"
+    image: "valheim:latest"
     environment:
       - SERVER_NAME="Frostborn Testing"
       - PORT=2456
