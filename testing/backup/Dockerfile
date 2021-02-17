@@ -8,8 +8,8 @@ ENV WORLD="Dedicated"
 ENV PASSWORD="Secret"
 ENV SAVE_DIR="/valheim/save"
 ENV AUTOUPDATE="false"
-
-ENV INTERVAL=60
+#default 15minutes
+ENV INTERVAL=900
 
 COPY backup.sh /
 
