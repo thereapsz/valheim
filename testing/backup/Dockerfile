@@ -1,4 +1,6 @@
-FROM ubuntu:20.04
+FROM alpine:latest
+
+RUN apk update && apk add bash
 
 ENV SERVER_NAME="My Server"
 ENV PORT=2456

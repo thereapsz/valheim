@@ -1,13 +1,13 @@
 version: "3.9"
 services:
   valheim:
-    build: .
+    #build: .
     #image: "reapsz/valheim:latest"
-    #image: "valheim:testing"
+    image: "valheim:testing"
     environment:
-      - SERVER_NAME="Frostborn Server"
+      - SERVER_NAME="Frostborn Testing"
       - PORT=2456
-      - WORLD="Solus"
+      - WORLD="Dedicated"
       - SAVE_DIR="/valheim/save"
       - AUTOUPDATE="true"
     ports:
