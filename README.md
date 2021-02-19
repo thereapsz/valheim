@@ -47,9 +47,7 @@ ENV AUTOUPDATE="false"
 version: "3.9"
 services:
   valheim:
-    #build: .
     image: "reapsz/valheim:latest"
-    #image: "valheim:latest"
     environment:
       - SERVER_NAME="Frostborn Testing"
       - PORT=2456
