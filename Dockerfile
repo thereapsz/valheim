@@ -1,5 +1,5 @@
-#FROM ubuntu:18.04
-FROM alpine:latest
+FROM ubuntu:18.04
+
 
 ENV SERVER_NAME="My Server"
 ENV PORT=2456
@@ -8,11 +8,9 @@ ENV PASSWORD="Secret"
 ENV SAVE_DIR="/valheim/save"
 ENV AUTOUPDATE="false"
 
-#RUN apt-get update && \
-#    apt-get install -y lib32gcc1 curl bash && \
-#    apt-get clean
-
-RUN apk add curl bash
+RUN apt-get update && \
+    apt-get install -y lib32gcc1 curl bash && \
+    apt-get clean
 
 #install steamcmd
 RUN mkdir /steamcmd
