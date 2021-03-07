@@ -11,7 +11,6 @@ RUN apt-get update && \
     apt-get install -y lib32gcc1 curl bash && \
     apt-get clean
 
-#install steamcmd
 RUN mkdir /steamcmd
 WORKDIR /steamcmd
 RUN curl -sqL 'https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz' | tar zxvf -
