@@ -47,17 +47,30 @@ ENV AUTOUPDATE="false"
 version: "3.9"
 services:
   valheim:
-    image: "reapsz:valheim"
+    #build: .
+    image: "reapsz/valheim:latest"
+    #image: "valheim:latest"
     environment:
-      - SERVER_NAME="Frostborn Server"
+      - SERVER_NAME="Frostborn Testing"
       - PORT=2456
-      - WORLD="Solus"
-      - SAVE_DIR="valheim/save"
-      - AUTOUPDATE="false"
+      - WORLD="Dedicated"
+      - SAVE_DIR="/valheim/save"
+      - AUTOUPDATE="true"
     ports:
       - "2456:2456"
       - "2457:2457"
       - "2458:2458"
+    volumes:
+      - valheimdata:/valheim
+  backup:
+    image: "reapsz/valheim:backup"
+    depends_on:
+      - valheim
+    volumes:
+      - valheimdata:/valheim
+
+volumes:
+     valheimdata:
 ```
 for custom volume add:
 
