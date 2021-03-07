@@ -2,8 +2,8 @@ version: "3.9"
 services:
   valheim:
     #build: .
-    #image: "reapsz/valheim:latest"
-    image: "valheim:latest"
+    image: "reapsz/valheim:latest"
+    #image: "valheim:latest"
     environment:
       - SERVER_NAME="Frostborn Testing"
       - PORT=2456
@@ -17,7 +17,7 @@ services:
     volumes:
       - valheimdata:/valheim
   backup:
-    image: "valheim:backup"
+    image: "reapsz/valheim:backup"
     depends_on:
       - valheim
     volumes:

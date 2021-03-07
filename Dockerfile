@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:20.04
 
 ENV SERVER_NAME="My Server"
 ENV PORT=2456
@@ -23,9 +23,11 @@ EXPOSE 2456
 
 RUN mkdir /valheim
 RUN mkdir /valheim/save
+RUN mkdir /valheim/backup
 WORKDIR /valheim
-COPY start.sh /
+COPY start.sh /valheim
+#COPY backup.sh /valheim
 
-CMD bash /start.sh
+CMD bash /valheim/start.sh
 
 #.config/unity3d/IronGate/Valheim/worlds
